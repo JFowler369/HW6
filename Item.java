@@ -17,7 +17,10 @@ public class Item {
      * @param  barcode The barcode of the item.
      */
     public Item(double weight, long barcode) {
-
+        this.name = null;
+        this.weight = weight;
+        this.price = 0.0;
+        this.barcode = barcode;
     }
 
     /**
@@ -28,6 +31,31 @@ public class Item {
      * @param  barcode The barcode of the item.
      */
     public Item(String name, double weight, double price, long barcode) {
-
+        this.name = name;
+        this.weight = weight;
+        this.price = price;
+        this.barcode = barcode;
     }
+
+    public double getPrice() {
+        return this.price;
+    }
+
+    public double getWeight() {
+        return this.weight;
+    }
+
+    public long getBarcode() {
+        return this.barcode;
+    }
+
+    public boolean equals(Item item) {
+        if (this.getBarcode() == item.getBarcode()
+                  && this.getWeight() == item.getWeight()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 }
