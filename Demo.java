@@ -1,5 +1,13 @@
+/**
+ * Called Program
+ * @author Jesse Fowler
+ * @version 1.0
+ */
 public class Demo {
 
+    /** Runs the program.  Creates items and scans them then pays
+      * @param args Nothing
+      */
     public static void main(String[] args) {
         Item i1 = new Item("Energy Drink 10-pack", 546.86, 17.89, 550759400);
         Item i2 = new Item("Ramen 12-pack", 74.84, 17.21, 12);
