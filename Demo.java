@@ -15,7 +15,7 @@ public class Demo {
             c.scan(i3);
             System.out.println("Scanning Item 4: " + i4.toString());
             c.scan(i4);
-        } catch(InvalidItemException e) {
+        } catch (InvalidItemException e) {
             System.out.println(e.toString());
         }
         java.time.LocalDate date = java.time.LocalDate.now();
@@ -24,11 +24,11 @@ public class Demo {
         CreditCard cCard = new CreditCard("John Smith", 1000.0, date);
         Cash cash = new Cash(1000.0);
         boolean payed = false;
-        try{
+        try {
             System.out.println("Trying BuzzCard");
             c.payForCart(bCard);
             payed = true;
-        } catch(PaymentFailedException e1) {
+        } catch (PaymentFailedException e1) {
             System.out.println(e1.toString());
         }
         if (!payed) {
@@ -36,7 +36,7 @@ public class Demo {
                 System.out.println("Trying Credit Card");
                 c.payForCart(cCard);
                 payed = true;
-            } catch(PaymentFailedException e2) {
+            } catch (PaymentFailedException e2) {
                 System.out.println(e2.toString());
             }
         }
@@ -45,7 +45,7 @@ public class Demo {
                 System.out.println("Paying With Cash");
                 c.payForCart(cash);
                 payed = true;
-            } catch(PaymentFailedException e2) {
+            } catch (PaymentFailedException e2) {
                 System.out.println(e2.toString());
             }
         }

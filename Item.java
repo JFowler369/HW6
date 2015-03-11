@@ -50,12 +50,8 @@ public class Item {
     }
 
     public boolean equals(Item item) {
-        if (this.getBarcode() == item.getBarcode()
-                  && this.getWeight() == item.getWeight()) {
-            return true;
-        } else {
-            return false;
-        }
+        return (this.getBarcode() == item.getBarcode()
+                  && this.getWeight() == item.getWeight());
     }
 
     public String toString() {
